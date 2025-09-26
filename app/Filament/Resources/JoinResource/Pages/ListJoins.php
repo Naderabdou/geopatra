@@ -9,6 +9,4 @@ use Filament\Resources\Pages\ListRecords;
 class ListJoins extends ListRecords
 {
     protected static string $resource = JoinResource::class;
-
-  
 }
