@@ -34,7 +34,7 @@
                                             </p>
 
 
-                                            <x-filament::link href="https://jaadara.com">
+                                            <x-filament::link href="">
                                                 &rarr; {{ __('للمزيد من مشاريع جدارة يمكنك زيارة موقعنا الرسمي') }}
                                             </x-filament::link>
 
