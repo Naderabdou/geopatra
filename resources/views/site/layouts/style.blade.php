@@ -19,13 +19,12 @@
 <link rel="stylesheet" href="{{ asset('site/css/main.css') }}" />
 
 <link rel="stylesheet" href="{{ asset('site/css/responsive.css') }}" />
-<link rel="stylesheet" href="{{ asset('site/css/en.css') }}" />
 
-{{-- @if (app()->getLocale() == 'en')
+@if (app()->getLocale() == 'en')
     <link rel="stylesheet" href="{{ asset('site/css/en.css') }}" />
 @else
     <link rel="stylesheet" href="{{ asset('site/css/ar.css') }}" />
-@endif --}}
+@endif
 <style>
     .error {
         color: red;
