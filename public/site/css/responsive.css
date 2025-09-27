@@ -326,6 +326,20 @@
 }
 
 @media (max-width: 992px) {
+    .row-values {
+        row-gap: 50px;
+    }
+
+    .main-sub-values {
+        width: 100% !important;
+        margin: auto;
+
+    }
+
+    .main-sub-values .sub-our-values {
+        margin: auto !important;
+    }
+
     .tabs-technology ul li {
         width: calc(100% / 3);
         text-align: center;

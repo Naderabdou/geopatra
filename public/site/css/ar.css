@@ -1,5 +1,338 @@
+@font-face {
+    font-family: "font_main";
+    src: url("../fonts/Tajawal-Regular.ttf");
+}
+
+@font-face {
+    font-family: "font_medium";
+    src: url("../fonts/Tajawal-Medium.ttf");
+}
+
+@font-face {
+    font-family: "font_bold";
+    src: url("../fonts/Tajawal-Bold.ttf");
+}
+
+@font-face {
+    font-family: "semiBold";
+    src: url("../fonts/Tajawal-Bold.ttf");
+}
+
 body {
     text-align: right;
     direction: rtl;
 }
 
+a {
+    font-size: 19px;
+}
+
+p {
+    font-size: 17px;
+}
+
+.title-start h2 {
+    font-size: 27px;
+}
+
+.content-our-team p {
+    font-size: 17px;
+}
+
+li {
+    font-size: 17px;
+}
+
+.title-center h3 {
+    font-size: 19px;
+}
+
+.hero::after {
+    left: auto;
+    right: 0;
+}
+
+.bg-video {
+    left: auto;
+    right: 0;
+
+}
+
+.text-services-index h2 {
+    font-size: 25px;
+
+}
+
+.ctm-btn-w img {
+    margin: 0 10px 0 0;
+    transform: translateX(0px) scale(-1.1);
+}
+
+.ctm-btn-w:hover img {
+    transform: translateX(-5px) scale(-1.1);
+}
+
+.ctm-btn-w:active img {
+    transform: translateX(3px) scale(-1.05);
+}
+
+.element ul li a {
+    font-size: 17px;
+}
+
+.owl-carousel {
+
+    direction: ltr;
+}
+
+
+
+
+.img-mask {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+
+.img-services-index {
+    position: relative;
+    padding: 25px;
+}
+
+.img-services-index::after {
+    right: auto;
+    left: 9px;
+}
+
+.stroke-bg {
+    right: auto;
+    left: 9px;
+}
+
+
+
+
+
+.text-projects-index {
+    direction: rtl;
+}
+
+
+.sub-projects-index:nth-child(odd) {
+    direction: ltr;
+}
+
+.sub-projects-index {
+    clip-path: polygon(0 0, 94% 0, 100% 19%, 100% 100%, 0 100%, 0 14%);
+
+}
+
+.sub-projects-index:nth-child(odd) {
+    clip-path: polygon(7% 0, 100% 0, 100% 0, 100% 100%, 0 100%, 0 26%);
+
+}
+
+
+.img-projects-index {
+    clip-path: polygon(0 0, 84% 0, 100% 19%, 100% 100%, 0 100%, 0 27%);
+
+}
+
+
+.sub-projects-index:nth-child(odd) .img-projects-index {
+    clip-path: polygon(12% 11%, 19% 0, 100% 0, 100% 100%, 0 100%, 0 27%);
+}
+
+
+
+.sub-projects-index::after {
+    right: auto;
+    left: 0;
+}
+
+
+
+
+
+.text-careers-index ul li {
+    padding-left: 15px;
+
+}
+
+.text-careers-index ul li::after {
+    left: auto;
+    right: 0;
+}
+
+
+
+.newsletter::after {
+    right: auto;
+    left: 0;
+
+}
+
+
+
+
+.mr-2 {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+
+
+
+
+.content-technology {
+    right: auto;
+    left: 5%;
+}
+
+
+
+
+
+.text-details-technology ul li {
+    padding-left: 30px;
+}
+
+.text-details-technology ul li::after {
+    left: auto;
+    right: 0;
+}
+
+
+.text-product-details>h2 {
+    color: var(--color-white);
+    font-family: 'font_bold';
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+
+
+
+
+.ctm-btn2 img {
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+.form-newsletter {
+    position: relative;
+    width: 45%;
+    margin: 25px auto;
+    text-align: center;
+    position: relative;
+}
+
+.form-newsletter button {
+    right: auto;
+    left: 10px;
+
+}
+
+.form-newsletter button img {
+    margin-right: auto;
+    margin-left: 5px;
+    transform: scalex(-1);
+}
+
+
+.form-newsletter button:hover img {
+    transform: translateX(5px) rotate(15deg) scale(-1.2, 1.2);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+}
+
+/* Flying paper airplane animation */
+@keyframes flyAway {
+    0% {
+        transform: translateX(0) rotate(0deg) scale(-1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(20px) rotate(30deg) scale(-1.3);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateX(40px) rotate(45deg) scale(-0.8);
+        opacity: 0;
+    }
+}
+
+.main-sub-values:nth-of-type(3) .sub-our-values {
+    margin: 0 0 0 auto;
+}
+
+.main-sub-values:nth-of-type(5) .sub-our-values {
+    margin: 0 auto  0 0 ;
+}
+
+
+/* Glowing effect on hover */
+.form-newsletter button::before {
+    left: auto;
+    right: -100%;
+
+}
+
+.form-newsletter button:hover::before {
+    left: auto;
+    right: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1500px) {
+    .img-projects-index {
+        clip-path: polygon(0 0, 84% 0, 100% 19%, 100% 100%, 0 100%, 0 27%);
+
+    }
+
+    .sub-projects-index:nth-child(odd) .img-projects-index {
+        clip-path: polygon(12% 9%, 18% 0, 100% 0, 100% 100%, 0 100%, 0 27%);
+    }
+}
+
+
+@media (max-width: 992px) {
+
+
+
+    .text-newsletter h2 {
+        margin: 13px 0;
+    }
+
+
+
+
+    .newsletter::after {
+        margin: auto;
+    }
+
+
+    .mr-2 {
+        margin: 25px auto !important;
+        margin: 25px auto !important;
+    }
+}

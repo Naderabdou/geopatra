@@ -99,19 +99,15 @@
 
                 <div class="main-our-values">
                     <div class="main-container">
-                        <div class="row row-gap">
+                        <div class="row-values">
                             @foreach ($ourValues as $value)
-                                <div class="col-lg-6">
+                                <div class="main-sub-values">
                                     <div class="sub-our-values">
                                         <div class="title-values">
                                             <img src="{{ $value->icon_path }}" alt="">
-                                            <h2>
-                                                {{ $value->name }}
-                                            </h2>
+                                            {{ $value->name }}
                                         </div>
-                                        <p>
-                                            {{ $value->description }}
-                                        </p>
+                                        {{ $value->description }}
 
                                     </div>
                                 </div>
