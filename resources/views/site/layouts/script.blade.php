@@ -73,6 +73,8 @@
 
 <script>
     $(document).ready(function() {
+      
+
 
         // تعريف الميثودز المخصصة
         $.validator.addMethod("noSpecialChars", function(value, element) {
@@ -322,9 +324,8 @@
                     required: true,
                     minlength: 3,
                 },
-                position: {
+                career_id: {
                     required: true,
-                    minlength: 3,
                 }
             },
 

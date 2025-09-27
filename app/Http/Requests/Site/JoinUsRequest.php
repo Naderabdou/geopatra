@@ -28,8 +28,8 @@ class JoinUsRequest extends FormRequest
             'phone' => 'required|string|max:255|min:3',
             'message' => 'required|string|min:3',
             'cv' => 'required|mimetypes:application/pdf',
-            'position' => 'required|string|max:255|min:3',
             'linkedin' => 'required|url',
+            'career_id' => 'required|exists:careers,id',
         ];
     }
 }

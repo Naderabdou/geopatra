@@ -120,23 +120,27 @@
                 <div class="row row-gap">
                     @forelse ($services as $service)
                         <div class="col-lg-4 col-md-6">
-                            <div class="sub-services-index">
-                                <div class="text-services-index">
-                                    <h2>{{ $service->name }}</h2>
-                                    <p>{{ Str::limit(strip_tags($service->short_desc), 300) }}</p>
-                                </div>
-                                <div class="img-services-index">
-                                    <div class="img-mask">
-                                        <img src="{{ $service->image_path }}" alt="" />
+                            <a href="{{ route('site.service.show', $service->slug) }}">
+
+                                <div class="sub-services-index">
+                                    <div class="text-services-index">
+                                        <h2>{{ $service->name }}</h2>
+                                        <p>{{ Str::limit(strip_tags($service->short_desc), 300) }}</p>
                                     </div>
-                                    <div class="stroke-bg">
-                                        <object data="{{ asset('site/images/s1.svg') }}" type="">
-                                            <img src="{{ asset('site/images/s1.svg') }}" alt="" />
-                                        </object>
+                                    <div class="img-services-index">
+                                        <div class="img-mask">
+                                            <img src="{{ $service->image_path }}" alt="" />
+                                        </div>
+                                        <div class="stroke-bg">
+                                            <object data="{{ asset('site/images/s1.svg') }}" type="">
+                                                <img src="{{ asset('site/images/s1.svg') }}" alt="" />
+                                            </object>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
+
                     @empty
                         <div class="item">
                             <div
@@ -153,7 +157,7 @@
 
                     <div class="col-lg-12">
                         <div class="text-center mt-6">
-                            <a href="services.html" class="ctm-btn-w">
+                            <a href="{{ route('site.services.index') }}" class="ctm-btn-w">
                                 {{ __('View more') }} <img src="{{ asset('site/images/arrow-1.svg') }}"
                                     alt="" /></a>
                         </div>
@@ -174,7 +178,9 @@
                     <div class="sub-projects-index" data-aos="fade-up-right" data-aos-easing="linear"
                         data-aos-duration="700">
                         <div class="img-projects-index">
-                            <img src="{{ $project->image_path }}" alt="" />
+                            <a href="{{ route('site.project.show', $project->slug) }}">
+                                <img src="{{ $project->image_path }}" alt="" />
+                            </a>
                         </div>
                         <div class="text-projects-index">
                             <h2>
@@ -220,7 +226,7 @@
 
 
                 <div class="btn-projects-index mt-5 text-center">
-                    <a href="" class="ctm-btn-w">{{ __('View more') }} <img
+                    <a href="{{ route('site.projects.index') }}" class="ctm-btn-w">{{ __('View more') }} <img
                             src="{{ asset('site/images/arrow-1.svg') }}" alt="" />
                     </a>
                 </div>
@@ -298,9 +304,15 @@
                                         @endforeach
                                     </ul>
                                     <div class="mt-3 text-center">
-                                        <a href="" class="ctm-btn-w">
+                                        {{-- <a data-toggle="modal" data-target=".join-us" href="" data-name="{{ $career->name }}" class="ctm-btn-w ctm-join">
                                             {{ __('Apply Now') }} <img src="{{ asset('site/images/arrow-1.svg') }}"
                                                 alt="" />
+                                        </a> --}}
+                                        <a data-toggle="modal" data-target=".join-us" href="#"
+                                            data-id="{{ $career->id }}" data-name="{{ $career->name }}"
+                                            class="ctm-btn-w ctm-join">
+                                            {{ __('Apply Now') }}
+                                            <img src="{{ asset('site/images/arrow-1.svg') }}" alt="" />
                                         </a>
                                     </div>
                                 </div>
@@ -327,24 +339,28 @@
                 <div class="row row-gap">
                     @forelse ($blogs as $blog)
                         <div class="col-lg-4 col-md-6">
-                            <div class="sub-blog-index">
-                                <div class="img-blog-index">
-                                    <img src="{{ $blog->image_path }}" alt="" />
+                            <a href="{{ route('site.blog.show', $blog->slug) }}">
+
+                                <div class="sub-blog-index">
+                                    <div class="img-blog-index">
+                                        <img src="{{ $blog->image_path }}" alt="" />
+                                    </div>
+                                    <div class="text-blog-index">
+                                        <h2>{{ $blog->title }}</h2>
+                                        <p>
+                                            {{ Str::limit(strip_tags($blog->desc), 300) }}
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="text-blog-index">
-                                    <h2>{{ $blog->title }}</h2>
-                                    <p>
-                                        {{ Str::limit(strip_tags($blog->desc), 300) }}
-                                    </p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
 
                     @empty
                         <div class="item">
                             <div
                                 class="sub-program flex flex-col items-center justify-center text-center p-6 rounded-xl shadow-md bg-gray-50 min-h-[250px]">
-                                <h2 class="text-2xl font-bold text-gray-700 mb-2">{{ __('لا توجد بيانات حاليا') }}</h2>
+                                <h2 class="text-2xl font-bold text-gray-700 mb-2">{{ __('لا توجد بيانات حاليا') }}
+                                </h2>
                                 <p class="text-gray-500">
                                     {{ __('تابعنا باستمرار لمعرفة الجديدة قريباً.') }}
                                 </p>
@@ -354,7 +370,7 @@
 
                     <div class="col-lg-12">
                         <div class="text-center mt-5">
-                            <a href="" class="ctm-btn-w">{{ __('View more') }} <img
+                            <a href="{{ route('site.blogs.index') }}" class="ctm-btn-w">{{ __('View more') }} <img
                                     src="{{ asset('site/images/arrow-1.svg') }}" alt="" /></a>
                         </div>
                     </div>
@@ -375,7 +391,8 @@
                 <p>
                     {{ $setting->{'desc_banner_' . app()->getLocale()} }}
                 </p>
-                <a href="" class="ctm-btn-w">{{ __('Get in Touch') }} <img src="{{ asset('site/images/arrow-1.svg') }}" alt="" />
+                <a href="{{ route('site.contact.index') }}" class="ctm-btn-w">{{ __('Get in Touch') }} <img
+                        src="{{ asset('site/images/arrow-1.svg') }}" alt="" />
                 </a>
             </div>
         </section>

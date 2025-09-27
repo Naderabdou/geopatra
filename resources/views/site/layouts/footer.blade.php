@@ -128,13 +128,26 @@
                                       id="phone" name="phone">
                               </div>
                           </div>
-                          <div class="col-lg-6">
+                          {{-- <div class="col-lg-6">
                               <div class="input-form ">
                                   <input type="text" placeholder="{{ __('Job title') }}" class="form-control"
                                       id="position" name="position">
 
                               </div>
+                          </div> --}}
+                          <div class="col-lg-6">
+                              <div class="input-form ">
+                                  <select name="career_id" id="career_id" class="form-control">
+                                      @foreach ($careers as $career)
+                                          <option value="{{ $career->id }}">{{ $career->name }}</option>
+                                      @endforeach
+                                  </select>
+                              </div>
                           </div>
+
+
+
+
                           <div class="col-lg-6">
                               <div class="input-form upload-flie">
                                   <input type="file" placeholder="{{ __('Resume') }}" id="resume"

@@ -90,10 +90,11 @@
 
 
 
+
             <!-- start our-values :>  -->
             <div class="our-values pg-section mr-section">
                 <div class="title-center">
-                    <h3>{{ _('Our values') }}</h3>
+                    <h3>{{ __('Our Values') }}</h3>
                     <h2>{{ $setting->{'values_title_' . app()->getLocale()} }}</h2>
                 </div>
 
@@ -105,9 +106,9 @@
                                     <div class="sub-our-values">
                                         <div class="title-values">
                                             <img src="{{ $value->icon_path }}" alt="">
-                                            {{ $value->name }}
+                                            <h2>{{ $value->name }}</h2>
                                         </div>
-                                        {{ $value->description }}
+                                        <p> {{ $value->description }}</p>
 
                                     </div>
                                 </div>

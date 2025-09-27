@@ -5,11 +5,9 @@ namespace App\Http\Controllers\Site;
 use App\Models\Blog;
 use App\Models\Join;
 use App\Models\Team;
-use App\Models\Career;
 use App\Models\Project;
 use App\Models\Service;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ContactRequest;
 use App\Http\Requests\SubscribeRequest;
 use App\Http\Requests\Site\JoinUsRequest;
 
@@ -21,14 +19,12 @@ class HomeController extends Controller
         $services = Service::take(6)->latest()->get();
         $projects = Project::take(2)->latest()->get();
         $teams = Team::latest()->get();
-        $careers = Career::latest()->get();
         $blogs = Blog::take(6)->latest()->get();
 
         return view('site.home', [
             'services' => $services,
             'projects' => $projects,
             'teams' => $teams,
-            'careers' => $careers,
             'blogs' => $blogs
         ]);
     }
@@ -46,7 +42,7 @@ class HomeController extends Controller
     }
 
 
-    
+
 
     public function subscribe(SubscribeRequest $request)
     {
