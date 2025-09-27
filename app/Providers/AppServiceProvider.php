@@ -37,6 +37,6 @@ class AppServiceProvider extends ServiceProvider
         };
 
         view()->composer('site.*', $ViewWithSettings);
-        view()->composer('site.home', $ViewWithCarrers);
+        view()->composer('site.*', $ViewWithCarrers);
     }
 }
