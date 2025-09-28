@@ -30,7 +30,7 @@
                                     placeholder="{{ __('Phone') }}">
                             </div>
                             <div class="input-form">
-                                <textarea name="message" id="message" placeholder="message" class="form-control" id=""></textarea>
+                                <textarea name="message" id="message" placeholder="{{ __('message') }}" class="form-control" id=""></textarea>
                             </div>
 
                             <button class="ctm-btn-w ctm-btn-contact"> {{ __('Send') }} <img
