@@ -82,7 +82,7 @@
                   <a href="{{ route('site.contact.index') }}">{{ __('Contact us') }}</a>
               </li>
               <li>
-                  <a data-toggle="modal" data-target=".join-us" href="">{{ __('Join now') }}</a>
+                  <a data-toggle="modal" data-target=".join-us" class='join-ele' href="">{{ __('Join now') }}</a>
               </li>
           </ul>
       </div>
