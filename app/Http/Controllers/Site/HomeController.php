@@ -31,7 +31,6 @@ class HomeController extends Controller
 
     public function join(JoinUsRequest $request)
     {
-
         $join = Join::create($request->validated());
 
         $title = 'يريد العميل '.$request->name.' التواصل معك'.' بخصوص '.$request->message.' وهذا رقمه '.$request->phone;

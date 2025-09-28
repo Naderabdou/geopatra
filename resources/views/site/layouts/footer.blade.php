@@ -4,11 +4,11 @@
               <ul>
                   <li><a href="/">{{ __('Home') }}</a></li>
                   <li><a href="{{ route('site.about') }}">{{ __('About us') }}</a></li>
-                  <li><a href="">{{ __('Services') }}</a></li>
-                  <li><a href="">{{ __('Projects') }}</a></li>
-                  <li><a href="">{{ __('Technologys') }}</a></li>
-                  <li><a href="">{{ __('News') }}</a></li>
-                  <li><a href="">{{ __('Contact us') }}</a></li>
+                  <li><a href="{{ route('site.services.index') }}">{{ __('Services') }}</a></li>
+                  <li><a href="{{ route('site.projects.index') }}">{{ __('Projects') }}</a></li>
+                  <li><a href="{{ route('site.technologys.index') }}">{{ __('Technologys') }}</a></li>
+                  <li><a href="{{ route('site.blogs.index') }}">{{ __('News') }}</a></li>
+                  <li><a href="{{ route('site.contact.index') }}">{{ __('Contact us') }}</a></li>
               </ul>
           </div>
           <h2>{{ __('Stay Connected') }}</h2>
@@ -82,7 +82,7 @@
                   <a href="{{ route('site.contact.index') }}">{{ __('Contact us') }}</a>
               </li>
               <li>
-                  <a href="">{{ __('Join now') }}</a>
+                  <a data-toggle="modal" data-target=".join-us" href="">{{ __('Join now') }}</a>
               </li>
           </ul>
       </div>
@@ -151,7 +151,7 @@
                           <div class="col-lg-6">
                               <div class="input-form upload-flie">
                                   <input type="file" placeholder="{{ __('Resume') }}" id="resume"
-                                      class="form-control" name="cv">
+                                      class="form-control" name="cv" accept=".pdf,.doc,.docx">
                                   <label for="resume" class="form-control"
                                       accept=".pdf,.doc,.docx">{{ __('Upload Resume') }}</label>
                               </div>

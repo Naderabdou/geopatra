@@ -330,6 +330,27 @@
         row-gap: 50px;
     }
 
+    .mr-section {
+        margin: 40px 0;
+    }
+
+    .text-product-details ul {
+
+        flex-wrap: wrap;
+    }
+
+    .text-product-details ul li h2 {
+        width: calc(100% - 55px);
+        text-align: start;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .text-product-details {
+
+        padding: 20px 13px;
+    }
+
     .main-sub-values {
         width: 100% !important;
         margin: auto;
@@ -485,6 +506,15 @@
 }
 
 @media (max-width: 768px) {
+    .tabs-technology ul li {
+        width: calc(100% / 2);
+    }
+
+    .text-news-page h2 {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
     .contect-header ul {
         flex-wrap: wrap;
         gap: 10px;
@@ -496,6 +526,16 @@
 
     .content-technology {
         width: 90%;
+    }
+
+    .media-footer ul li a i {
+        margin-right: 3px;
+        font-size: 14px;
+        transition: transform 0.3s ease;
+    }
+
+    .media-footer ul li a {
+        font-size: 11px !important;
     }
 
     .bg-technology {

@@ -155,7 +155,8 @@ li {
 
 
 .text-careers-index ul li {
-    padding-left: 15px;
+    padding-left: 0;
+    padding-right: 15px;
 
 }
 
@@ -194,7 +195,8 @@ li {
 
 
 .text-details-technology ul li {
-    padding-left: 30px;
+    padding-left: auto;
+    padding-right: 30px;
 }
 
 .text-details-technology ul li::after {
@@ -204,9 +206,6 @@ li {
 
 
 .text-product-details>h2 {
-    color: var(--color-white);
-    font-family: 'font_bold';
-    margin-bottom: 25px;
     font-size: 16px;
 }
 
@@ -226,13 +225,6 @@ li {
 
 
 
-.form-newsletter {
-    position: relative;
-    width: 45%;
-    margin: 25px auto;
-    text-align: center;
-    position: relative;
-}
 
 .form-newsletter button {
     right: auto;
@@ -275,7 +267,7 @@ li {
 }
 
 .main-sub-values:nth-of-type(5) .sub-our-values {
-    margin: 0 auto  0 0 ;
+    margin: 0 auto 0 0;
 }
 
 
@@ -328,11 +320,24 @@ li {
 
     .newsletter::after {
         margin: auto;
+        right: 0;
     }
 
+    .text-services-index h2 {
+        font-size: 19px;
+    }
 
     .mr-2 {
         margin: 25px auto !important;
         margin: 25px auto !important;
+    }
+
+    .title-start h2 {
+        font-size: 19px;
+    }
+
+    .ctm-btn-w {
+        padding: 11px 28px;
+        font-size: 15px;
     }
 }

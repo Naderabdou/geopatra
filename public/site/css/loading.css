@@ -6,8 +6,8 @@
     position: fixed;
     z-index: 999;
     display: flex;
+    direction:ltr  !important;
     align-items: center;
-    display: rtl !important;
     justify-content: center;
 
 }

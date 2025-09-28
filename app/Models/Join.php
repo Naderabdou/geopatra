@@ -11,7 +11,7 @@ class Join extends Model
         'email',
         'phone',
         'linkedin',
-        'position',
+        'career_id',
         'message',
         'cv',
     ];
